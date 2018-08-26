@@ -1,37 +1,39 @@
 #dictionary-popup {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.2);
     height: 200px;
     width: 500px;
     position: absolute;
     z-index: 9999;
-    border: 2px solid #c30407;
+    border: 2px solid #b5b5b5;
 }
 
 #dictionary-popup > iframe {
     height: 100%;
     width: 100%;
-    /*border-radius: 5px;*/
 }
 
-.lds-dual-ring {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
+.spinner {
+    height: 35px;
+    width: 35px;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
 }
-.lds-dual-ring:after {
+.spinner:after {
+    animation: spinner 1.2s linear infinite;
+    border: 5px solid;
+    border-color: #b5b5b5 transparent #9b9b9b transparent;
+    border-radius: 50%;
     content: " ";
     display: block;
-    width: 46px;
-    height: 46px;
-    margin: 1px;
-    border-radius: 50%;
-    border: 5px solid #000000;
-    border-color: #000000 transparent #000000 transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
+    height: 25px;
+    width: 25px;
 }
-@keyframes lds-dual-ring {
+
+@keyframes spinner {
     0% {
         transform: rotate(0deg);
     }
