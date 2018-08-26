@@ -1,5 +1,6 @@
 body {
     width: 200px;
+    font-family: "Segoe UI", sans-serif;
 }
 
 ul {
@@ -9,8 +10,7 @@ ul {
 
 li {
     cursor: pointer;
-    padding: .5em 2em;
-    border: 3px solid transparent;
+    padding: .5em;
 }
 
 li + li {
@@ -18,5 +18,5 @@ li + li {
 }
 
 li:hover, .active {
-    border-color: grey;
+    background-color: #f0f0f0;
 }

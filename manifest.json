@@ -23,6 +23,11 @@
       "all_frames": true,
       "matches": ["https://www.diki.pl/*addon=true*"],
       "css": ["dictionaries/diki.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://www.dictionary.com/*addon=true*"],
+      "css": ["dictionaries/dictionarycom.css"]
     }
   ],
   "permissions": [
