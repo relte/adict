@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Dictionary",
+  "version": "0.1.0",
+  "description": "Dictionary extension with pop-up",
+  "icons": {
+    "48": "icons/main.svg",
+    "96": "icons/main.svg"
+  },
+  "background": {
+    "scripts": [
+      "main.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://www.diki.pl/*addon=true*"],
+      "css": ["dictionaries/diki.css"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "browser_action": {
+    "default_icon": "icons/main.svg",
+    "default_title": "Dictionary",
+    "default_popup": "page.html"
+  }
+}

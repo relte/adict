@@ -1,0 +1,41 @@
+#dictionary-popup {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    z-index: 9999;
+    border: 2px solid #c30407;
+}
+
+#dictionary-popup > iframe {
+    height: 100%;
+    width: 100%;
+    /*border-radius: 5px;*/
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    border-color: #000000 transparent #000000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

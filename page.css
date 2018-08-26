@@ -1,0 +1,22 @@
+body {
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: .5em 2em;
+    border: 3px solid transparent;
+}
+
+li + li {
+    margin-top: 5px;
+}
+
+li:hover, .active {
+    border-color: grey;
+}
