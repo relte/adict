@@ -30,19 +30,22 @@ function showPopup(url, phrase, clickEvent) {
     popup.style.left = clickEvent.pageX + 'px';
 
     var spinner = document.createElement('div');
-    spinner.classList.add('lds-dual-ring');
+    spinner.classList.add('spinner');
     popup.appendChild(spinner);
 
     var iframe = document.createElement('iframe');
     iframe.setAttribute('src', url.replace('%phrase%', phrase));
-    iframe.addEventListener('load', onIframeLoad);
+    var onLoad = onIframeLoad(spinner);
+    iframe.addEventListener('load', onLoad);
     iframe.style.display = 'none';
-
     popup.appendChild(iframe);
 
     document.body.appendChild(popup);
 }
 
-function onIframeLoad() {
-    this.style.display = 'block';
+function onIframeLoad(spinner) {
+    return function () {
+        spinner.remove();
+        this.style.display = 'block';
+    }
 }
