@@ -1,0 +1,15 @@
+.dictionarySectionHeader,
+.dikiHeaderMenuIcon,
+.adsbygoogle,
+.dikiSearchForm,
+iframe {
+    display: none !important;
+}
+
+#contentWrapper, .pict {
+    padding: 0 !important;
+}
+
+body {
+    border-top: none !important;
+}
