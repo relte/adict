@@ -2,6 +2,11 @@
   "manifest_version": 2,
   "name": "Dictionary",
   "version": "0.1.0",
+  "applications": {
+    "gecko": {
+      "id": "dictionary@krzysztoflament.pl"
+    }
+  },
   "description": "Dictionary extension with pop-up",
   "icons": {
     "48": "icons/main.svg",
@@ -9,25 +14,25 @@
   },
   "background": {
     "scripts": [
-      "main.js"
+      "background.js"
     ]
   },
   "content_scripts": [
     {
       "all_frames": true,
       "matches": ["*://*/*"],
-      "js": ["content.js"],
-      "css": ["content.css"]
+      "js": ["popup/popup.js"],
+      "css": ["popup/popup.css"]
     },
     {
       "all_frames": true,
       "matches": ["https://www.diki.pl/*addon=true*"],
-      "css": ["dictionaries/diki.css"]
+      "css": ["popup/styles/diki.css"]
     },
     {
       "all_frames": true,
       "matches": ["https://www.dictionary.com/*addon=true*"],
-      "css": ["dictionaries/dictionarycom.css"]
+      "css": ["popup/styles/dictionarycom.css"]
     }
   ],
   "permissions": [
@@ -37,6 +42,6 @@
   "browser_action": {
     "default_icon": "icons/main.svg",
     "default_title": "Dictionary",
-    "default_popup": "page.html"
+    "default_popup": "menu/menu.html"
   }
 }
