@@ -12,6 +12,7 @@
 #dictionary-popup > iframe {
     height: 100%;
     width: 100%;
+    border: none;
 }
 
 .spinner {
@@ -22,6 +23,7 @@
     position: relative;
     transform: translate(-50%, -50%);
 }
+
 .spinner:after {
     animation: spinner 1.2s linear infinite;
     border: 5px solid;
