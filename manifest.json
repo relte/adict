@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Dictionary",
+  "name": "Adict",
   "version": "0.1.0",
   "applications": {
     "gecko": {
-      "id": "dictionary@krzysztoflament.pl"
+      "id": "adict@krzysztoflament.pl"
     }
   },
-  "description": "Dictionary extension with pop-up",
+  "description": "Popup dictionary extension",
   "icons": {
     "48": "icons/main.svg",
     "96": "icons/main.svg"
@@ -46,7 +46,7 @@
   ],
   "browser_action": {
     "default_icon": "icons/main.svg",
-    "default_title": "Dictionary",
+    "default_title": "Adict",
     "default_popup": "menu/menu.html"
   }
 }
