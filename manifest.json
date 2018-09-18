@@ -32,7 +32,12 @@
     {
       "all_frames": true,
       "matches": ["https://www.dictionary.com/*addon=true*"],
-      "css": ["popup/styles/dictionarycom.css"]
+      "css": ["popup/styles/dictionary_com.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://www.merriam-webster.com/*addon=true*"],
+      "css": ["popup/styles/merriam_webster.css"]
     }
   ],
   "permissions": [

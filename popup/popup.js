@@ -7,8 +7,8 @@ document.addEventListener('click', function (event) {
             .then(function (data) {
                 showPopup(data.dictionaryUrl, selectedText, event);
             })
-            .catch(function () {
-                console.log('Dictionary not set!');
+            .catch(function (data) {
+                console.log(data);
             })
         ;
     } else if (!event.target.closest('#dictionary-popup')) {
@@ -16,36 +16,59 @@ document.addEventListener('click', function (event) {
     }
 });
 
-function removePopup() {
-    var popup = document.getElementById('dictionary-popup');
-    if (popup) {
-        popup.remove();
-    }
-}
-
 function showPopup(url, phrase, clickEvent) {
     var popup = document.createElement('div');
     popup.setAttribute('id', 'dictionary-popup');
-    popup.style.top = clickEvent.pageY + 15 + 'px';
-    popup.style.left = clickEvent.pageX + 'px';
 
-    var spinner = document.createElement('div');
-    spinner.classList.add('spinner');
+    popup.style.top = intToPx(clickEvent.pageY + 15);
+    popup.style.left = intToPx(clickEvent.pageX);
+    preventOverflow(popup, clickEvent.pageX);
+
+    var spinner = createSpinner(popup);
     popup.appendChild(spinner);
 
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('src', url.replace('%phrase%', phrase));
-    var onLoad = onIframeLoad(spinner);
-    iframe.addEventListener('load', onLoad);
-    iframe.style.display = 'none';
-    popup.appendChild(iframe);
+    popup.appendChild(createIframe(url, phrase, spinner));
 
     document.body.appendChild(popup);
 }
 
-function onIframeLoad(spinner) {
+function intToPx(number) {
+    return number + 'px';
+}
+
+function preventOverflow(popup, pageX) {
+    var rightOverflow = 520 - (window.innerWidth - pageX);
+    if (rightOverflow > 0) {
+        popup.style.left = intToPx(pageX - rightOverflow);
+    }
+}
+
+function createSpinner() {
+    var spinner = document.createElement('div');
+    spinner.classList.add('spinner');
+
+    return spinner;
+}
+
+function createIframe(url, phrase, spinner) {
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', url.replace('%phrase%', phrase));
+    iframe.addEventListener('load', getRemoveElementFunction(spinner));
+    iframe.style.display = 'none';
+
+    return iframe;
+}
+
+function getRemoveElementFunction(element) {
     return function () {
-        spinner.remove();
+        element.remove();
         this.style.display = 'block';
+    }
+}
+
+function removePopup() {
+    var popup = document.getElementById('dictionary-popup');
+    if (popup) {
+        popup.remove();
     }
 }
