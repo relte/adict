@@ -79,7 +79,7 @@ function onIframeLoad(spinner, anchor) {
         var iframe = this;
         spinner.remove();
         iframe.style.display = 'block';
-        anchor.style.display = 'inline';
+        anchor.style.display = 'inline-block';
     }
 }
 

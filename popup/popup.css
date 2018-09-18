@@ -2,23 +2,35 @@
     background-color: white;
     border-radius: 3px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.2);
-    height: 280px;
     width: 500px;
+    min-height: 260px;
     position: absolute;
     z-index: 9999;
     border: 2px solid #b5b5b5;
+    text-align: right;
 }
 
 #dictionary-popup > iframe {
-    height: 92%;
+    height: 260px;
     width: 100%;
     border: none;
 }
 
 #dictionary-popup > a {
+    bottom: 3px;
+    right: 0;
+    left: 0;
     color: #b5b5b5;
-    font-size: .5em;
-    padding-left: 1em;
+    font-size: 8pt;
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 3px 10px;
+    line-height: 15px;
+    position: relative;
+}
+
+#dictionary-popup > a:hover {
+    text-decoration: underline;
 }
 
 .spinner {
@@ -26,7 +38,7 @@
     width: 35px;
     left: 50%;
     top: 50%;
-    position: relative;
+    position: absolute;
     transform: translate(-50%, -50%);
 }
 
@@ -35,6 +47,7 @@
     border: 5px solid;
     border-color: #b5b5b5 transparent #e8c13a transparent;
     border-radius: 50%;
+    box-sizing: unset;
     content: " ";
     display: block;
     height: 25px;
