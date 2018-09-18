@@ -27,7 +27,12 @@ function showPopup(url, phrase, clickEvent) {
     var spinner = createSpinner(popup);
     popup.appendChild(spinner);
 
-    popup.appendChild(createIframe(url, phrase, spinner));
+    url = url.replace('%phrase%', phrase);
+
+    var anchor = createAnchor(url);
+
+    popup.appendChild(createIframe(url, spinner, anchor));
+    popup.appendChild(anchor);
 
     document.body.appendChild(popup);
 }
@@ -50,19 +55,31 @@ function createSpinner() {
     return spinner;
 }
 
-function createIframe(url, phrase, spinner) {
+function createAnchor(url) {
+    var anchor = document.createElement('a');
+    var href = url.replace('addon=true', 'addon=false');
+    anchor.href = href;
+    anchor.text = href;
+    anchor.target = '_blank';
+    anchor.style.display = 'none';
+    return anchor;
+}
+
+function createIframe(url, spinner, anchor) {
     var iframe = document.createElement('iframe');
-    iframe.setAttribute('src', url.replace('%phrase%', phrase));
-    iframe.addEventListener('load', getRemoveElementFunction(spinner));
+    iframe.setAttribute('src', url);
+    iframe.addEventListener('load', onIframeLoad(spinner, anchor));
     iframe.style.display = 'none';
 
     return iframe;
 }
 
-function getRemoveElementFunction(element) {
+function onIframeLoad(spinner, anchor) {
     return function () {
-        element.remove();
-        this.style.display = 'block';
+        var iframe = this;
+        spinner.remove();
+        iframe.style.display = 'block';
+        anchor.style.display = 'inline';
     }
 }
 
