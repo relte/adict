@@ -1,0 +1,16 @@
+header,
+.row.vg-header,
+.mw-ad-slot-top,
+.recirc-bar-footer,
+.mobile-fixed-ad,
+.menu-filler {
+    display: none;
+}
+
+.container {
+    padding-top: .5em !important;
+}
+
+.hword {
+    font-size: 2em !important;
+}
