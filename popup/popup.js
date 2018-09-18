@@ -1,6 +1,6 @@
 document.addEventListener('click', function (event) {
     var selectedText = window.getSelection().toString();
-    if (selectedText && event.ctrlKey) {
+    if (selectedText && event.altKey) {
         removePopup();
 
         browser.storage.local.get('dictionaryUrl')

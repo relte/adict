@@ -7,7 +7,7 @@
       "id": "adict@krzysztoflament.pl"
     }
   },
-  "description": "This extension allows you to easily look up a phrase in English or Polish. To view definitions double click the phrase while holding CTRL. In order to choose the dictionary click on the extension icon and pick one from the list.",
+  "description": "This addon allows you to easily look up a phrase in English or Polish holding ALT and double clicking. You can choose one of the three available dictionaries: dictionary.com (EN), merriam-webster.com (EN) and diki.pl (EN/PL).",
   "icons": {
     "48": "icons/main.svg",
     "96": "icons/main.svg"
