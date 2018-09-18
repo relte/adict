@@ -33,7 +33,7 @@
 .spinner:after {
     animation: spinner 1.2s linear infinite;
     border: 5px solid;
-    border-color: #b5b5b5 transparent #9b9b9b transparent;
+    border-color: #b5b5b5 transparent #e8c13a transparent;
     border-radius: 50%;
     content: " ";
     display: block;

@@ -1,6 +1,8 @@
 body {
-    width: 200px;
-    font-family: "Segoe UI", sans-serif;
+    width: 300px;
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    color: #454545;
+    padding: 1em;
 }
 
 ul {
@@ -18,5 +20,5 @@ li + li {
 }
 
 li:hover, .active {
-    background-color: #f0f0f0;
+    background-color: #e8c13a;
 }
