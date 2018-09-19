@@ -7,7 +7,7 @@
       "id": "adict@krzysztoflament.pl"
     }
   },
-  "description": "This addon allows you to easily look up a phrase in English or Polish holding ALT and double clicking. You can choose one of the three available dictionaries: dictionary.com (EN), merriam-webster.com (EN) and diki.pl (EN/PL).",
+  "description": "This addon allows you to easily look up a phrase in English or Polish.",
   "icons": {
     "16": "icons/main16.png",
     "32": "icons/main32.png",
