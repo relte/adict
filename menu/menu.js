@@ -2,9 +2,6 @@ browser.storage.local.get('dictionaryUrl')
     .then(function (data) {
         var element = document.querySelector('li[data-url="' + data.dictionaryUrl + '"');
         setActiveDictionary(element);
-    })
-    .catch(function () {
-        console.log('No dictionary set!');
     });
 
 document.addEventListener('click', function (event) {
