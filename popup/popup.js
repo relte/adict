@@ -6,11 +6,8 @@ document.addEventListener('click', function (event) {
         browser.storage.local.get('dictionaryUrl')
             .then(function (data) {
                 showPopup(data.dictionaryUrl, selectedText, event);
-            })
-            .catch(function (data) {
-                console.log(data);
-            })
-        ;
+            });
+
     } else if (!event.target.closest('#dictionary-popup')) {
         removePopup();
     }
