@@ -9,11 +9,15 @@
   },
   "description": "This addon allows you to easily look up a phrase in English or Polish holding ALT and double clicking. You can choose one of the three available dictionaries: dictionary.com (EN), merriam-webster.com (EN) and diki.pl (EN/PL).",
   "icons": {
-    "48": "icons/main.svg",
-    "96": "icons/main.svg"
+    "16": "icons/main16.png",
+    "32": "icons/main32.png",
+    "48": "icons/main48.png",
+    "96": "icons/main96.png",
+    "128": "icons/main128.png"
   },
   "background": {
     "scripts": [
+      "storage.js",
       "background.js"
     ]
   },
@@ -21,7 +25,7 @@
     {
       "all_frames": true,
       "matches": ["*://*/*"],
-      "js": ["popup/popup.js"],
+      "js": ["storage.js", "popup/popup.js"],
       "css": ["popup/popup.css"]
     },
     {
@@ -44,7 +48,13 @@
     "storage"
   ],
   "browser_action": {
-    "default_icon": "icons/main.svg",
+    "default_icon": {
+      "16": "icons/main16.png",
+      "32": "icons/main32.png",
+      "48": "icons/main48.png",
+      "96": "icons/main96.png",
+      "128": "icons/main128.png"
+    },
     "default_title": "Adict",
     "default_popup": "menu/menu.html"
   }
