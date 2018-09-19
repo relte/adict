@@ -1,0 +1,16 @@
+body {
+    font-family: "Roboto", "Segoe UI", sans-serif;
+    padding: 3em;
+}
+
+img {
+    padding-right: 1em;
+}
+
+h2 {
+    margin-bottom: 2em;
+}
+
+li {
+    list-style: none;
+}
