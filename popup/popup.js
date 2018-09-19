@@ -3,11 +3,9 @@ document.addEventListener('click', function (event) {
     if (selectedText && event.altKey) {
         removePopup();
 
-        browser.storage.local.get('dictionaryUrl')
-            .then(function (data) {
-                showPopup(data.dictionaryUrl, selectedText, event);
-            });
-
+        getStorageElement('dictionaryUrl', function (data) {
+            showPopup(data.dictionaryUrl, selectedText, event);
+        });
     } else if (!event.target.closest('#dictionary-popup')) {
         removePopup();
     }

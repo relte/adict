@@ -6,16 +6,16 @@ aside,
 .css-mtqscf,
 .css-1lfse6c,
 .css-hh4f95 {
-    display: none;
+    display: none !important;
 }
 
 .css-1qbmdpe {
-    margin: 0;
-    margin-right: 1rem;
+    margin: 0 !important;
+    margin-right: 1rem !important;
 }
 
 .css-1sdcacc {
-    margin-top: .5rem;
+    margin-top: .5rem !important;
 }
 
 h1 {

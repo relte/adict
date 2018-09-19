@@ -1,10 +1,18 @@
-browser.runtime.onInstalled.addListener(function (details) {
+var main;
+
+if (typeof browser !== 'undefined') {
+    main = browser;
+} else if (typeof chrome !== 'undefined') {
+    main = chrome;
+}
+
+main.runtime.onInstalled.addListener(function (details) {
     if (details.reason === 'update') {
-        browser.tabs.create({
+        main.tabs.create({
             url: 'update_page/update_page.html'
         });
     } else if (details.reason === 'install') {
-        browser.storage.local.set({
+        setStorageElement({
             dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
         });
     }
