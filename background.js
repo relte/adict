@@ -7,3 +7,11 @@ browser.storage.local.get('dictionaryUrl')
         }
     })
 ;
+
+browser.runtime.onInstalled.addListener(function (details) {
+    if (details.reason === 'update') {
+        browser.tabs.create({
+            url: 'update_page/update_page.html'
+        });
+    }
+});
