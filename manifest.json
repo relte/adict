@@ -18,6 +18,7 @@
   },
   "background": {
     "scripts": [
+      "lib/browser-polyfill.js",
       "storage.js",
       "background.js"
     ]
@@ -26,7 +27,7 @@
     {
       "all_frames": true,
       "matches": ["*://*/*"],
-      "js": ["storage.js", "popup/popup.js"],
+      "js": ["lib/browser-polyfill.js", "storage.js", "popup/popup.js"],
       "css": ["popup/popup.css"]
     },
     {
