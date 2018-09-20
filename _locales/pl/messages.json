@@ -1,0 +1,44 @@
+{
+  "extension_name": {
+    "message": "Adict - Szybkie wyszukiwanie w słowniku"
+  },
+  "extension_description": {
+    "message": "To rozszerzenie umożliwia wygodne wyszukiwanie tłumaczeń dla fraz w języku angielskim i polskim."
+  },
+  "menu_page_path": {
+    "message": "menu/menu.pl.html"
+  },
+  "update_page_path": {
+    "message": "update_page/update_page.pl.html"
+  },
+  "dictionary_com": {
+    "message": "Dictionary.com (ang.)"
+  },
+  "merriam_webster": {
+    "message": "Merriam-Webster (ang.)"
+  },
+  "diki": {
+    "message": "Diki (ang./pol.)"
+  },
+  "choose_dictionary": {
+    "message": "Wybierz słownik"
+  },
+  "usage_info": {
+    "message": "Aby wyświetlić tłumaczenie, kliknij dwukrotnie frazę przytrzymując klawisz ALT."
+  },
+  "update_page_title": {
+    "message": "Adict zaktualizowany!"
+  },
+  "update_page_header": {
+    "message": "Adict został zaktualizowany!"
+  },
+  "version_0_1_1_note": {
+    "message": "Klawisz, który należy przytrzymać przy wywoływaniu okienka z tłumaczeniem, został zmieniony z CTRL na <strong>ALT</strong>. Zachowywanie wybranego wcześniej słownika zostało naprawione."
+  },
+  "version_0_1_2_note": {
+    "message": "Rozszerzenie zostało dostosowane do działania w przeglądarce Google Chrome."
+  },
+  "version_0_1_3_note": {
+    "message": "Zostało dodane polskie tłumaczenie interfejsu rozszerzenia oraz informacji o wydaniach. Poprawiono wygląd."
+  }
+}
