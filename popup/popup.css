@@ -33,7 +33,7 @@
     text-decoration: underline;
 }
 
-.spinner {
+.adict-spinner {
     height: 35px;
     width: 35px;
     left: 50%;
@@ -42,8 +42,8 @@
     transform: translate(-50%, -50%);
 }
 
-.spinner:after {
-    animation: spinner 1.2s linear infinite;
+.adict-spinner:after {
+    animation: adict-spinner 1.2s linear infinite;
     border: 5px solid;
     border-color: #b5b5b5 transparent #e8c13a transparent;
     border-radius: 50%;
@@ -54,7 +54,7 @@
     width: 25px;
 }
 
-@keyframes spinner {
+@keyframes adict-spinner {
     0% {
         transform: rotate(0deg);
     }
