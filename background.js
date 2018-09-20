@@ -1,4 +1,4 @@
-var main;
+let main;
 
 if (typeof browser !== 'undefined') {
     main = browser;
@@ -6,7 +6,7 @@ if (typeof browser !== 'undefined') {
     main = chrome;
 }
 
-main.runtime.onInstalled.addListener(function (details) {
+main.runtime.onInstalled.addListener(details => {
     if (details.reason === 'update') {
         main.tabs.create({
             url: 'update_page/update_page.html'

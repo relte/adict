@@ -1,9 +1,9 @@
-getStorageElement('dictionaryUrl', function (data) {
-    var element = document.querySelector('li[data-url="' + data.dictionaryUrl + '"');
+getStorageElement('dictionaryUrl', data => {
+    let element = document.querySelector('li[data-url="' + data.dictionaryUrl + '"');
     setActiveDictionary(element);
 });
 
-document.addEventListener('click', function (event) {
+document.addEventListener('click', event => {
     if (!event.target.matches('li')) {
         return;
     }
@@ -15,9 +15,9 @@ document.addEventListener('click', function (event) {
 });
 
 function setActiveDictionary(element) {
-    var parent = element.parentNode;
-    var elements = parent.querySelectorAll('li');
-    for (var i = 0; i < elements.length; i++) {
+    let parent = element.parentNode;
+    let elements = parent.querySelectorAll('li');
+    for (let i = 0; i < elements.length; i++) {
         elements[i].classList.remove('active');
     }
 
