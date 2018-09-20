@@ -1,8 +1,13 @@
 body {
     width: 300px;
     font-family: "Roboto", "Segoe UI", sans-serif;
+    font-size: 12pt;
     color: #454545;
-    padding: 1em;
+    padding: 10px;
+}
+
+p {
+    margin-bottom: 0;
 }
 
 ul {
@@ -12,7 +17,7 @@ ul {
 
 li {
     cursor: pointer;
-    padding: .5em;
+    padding: 10px;
 }
 
 li + li {

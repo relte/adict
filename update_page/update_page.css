@@ -1,6 +1,7 @@
 body {
     font-family: "Roboto", "Segoe UI", sans-serif;
-    padding: 3em;
+    font-size: 12pt;
+    padding: 1.5em 3em;
 }
 
 img {
@@ -13,4 +14,5 @@ h2 {
 
 li {
     list-style: none;
+    margin-bottom: .7em;
 }
