@@ -1,9 +1,9 @@
-document.addEventListener('click', function (event) {
-    var selectedText = window.getSelection().toString();
+document.addEventListener('click', event => {
+    let selectedText = window.getSelection().toString();
     if (selectedText && event.altKey) {
         removePopup();
 
-        getStorageElement('dictionaryUrl', function (data) {
+        getStorageElement('dictionaryUrl', data => {
             showPopup(data.dictionaryUrl, selectedText, event);
         });
     } else if (!event.target.closest('#dictionary-popup')) {
@@ -12,19 +12,19 @@ document.addEventListener('click', function (event) {
 });
 
 function showPopup(url, phrase, clickEvent) {
-    var popup = document.createElement('div');
+    let popup = document.createElement('div');
     popup.setAttribute('id', 'dictionary-popup');
 
     popup.style.top = intToPx(clickEvent.pageY + 15);
     popup.style.left = intToPx(clickEvent.pageX);
     preventOverflow(popup, clickEvent.pageX);
 
-    var spinner = createSpinner(popup);
+    let spinner = createSpinner(popup);
     popup.appendChild(spinner);
 
     url = url.replace('%phrase%', phrase);
 
-    var anchor = createAnchor(url);
+    let anchor = createAnchor(url);
 
     popup.appendChild(createIframe(url, spinner, anchor));
     popup.appendChild(anchor);
@@ -37,22 +37,22 @@ function intToPx(number) {
 }
 
 function preventOverflow(popup, pageX) {
-    var rightOverflow = 520 - (window.innerWidth - pageX);
+    let rightOverflow = 520 - (window.innerWidth - pageX);
     if (rightOverflow > 0) {
         popup.style.left = intToPx(pageX - rightOverflow);
     }
 }
 
 function createSpinner() {
-    var spinner = document.createElement('div');
+    let spinner = document.createElement('div');
     spinner.classList.add('adict-spinner');
 
     return spinner;
 }
 
 function createAnchor(url) {
-    var anchor = document.createElement('a');
-    var href = url.replace('addon=true', 'addon=false');
+    let anchor = document.createElement('a');
+    let href = url.replace('addon=true', 'addon=false');
     anchor.href = href;
     anchor.text = href;
     anchor.target = '_blank';
@@ -61,7 +61,7 @@ function createAnchor(url) {
 }
 
 function createIframe(url, spinner, anchor) {
-    var iframe = document.createElement('iframe');
+    let iframe = document.createElement('iframe');
     iframe.setAttribute('src', url);
     iframe.addEventListener('load', onIframeLoad(spinner, anchor));
     iframe.style.display = 'none';
@@ -71,7 +71,7 @@ function createIframe(url, spinner, anchor) {
 
 function onIframeLoad(spinner, anchor) {
     return function () {
-        var iframe = this;
+        let iframe = this;
         spinner.remove();
         iframe.style.display = 'block';
         anchor.style.display = 'inline-block';
@@ -79,7 +79,7 @@ function onIframeLoad(spinner, anchor) {
 }
 
 function removePopup() {
-    var popup = document.getElementById('dictionary-popup');
+    let popup = document.getElementById('dictionary-popup');
     if (popup) {
         popup.remove();
     }
