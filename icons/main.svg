@@ -7,13 +7,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="2265.4382"
-   viewBox="0 0 2265.4382 2265.4382"
-   width="2265.4382"
+   height="128"
+   viewBox="0 0 128 128"
+   width="128"
    version="1.1"
    id="svg4568"
    sodipodi:docname="main.svg"
-   inkscape:version="0.92.2 2405546, 2018-03-11">
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   inkscape:export-filename="/home/krzysztof/projects/dictionary/icons/chrome_webstore.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <metadata
      id="metadata4574">
     <rdf:RDF>
@@ -22,6 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -40,23 +44,31 @@
      inkscape:window-height="1013"
      id="namedview4570"
      showgrid="false"
-     inkscape:zoom="0.21930804"
-     inkscape:cx="806.32524"
-     inkscape:cy="1039.4916"
+     inkscape:zoom="4"
+     inkscape:cx="28.833271"
+     inkscape:cy="39.58434"
      inkscape:window-x="0"
      inkscape:window-y="33"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4568" />
-  <circle
-     style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6.45664358;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     id="path4588"
-     cx="1132.7191"
-     cy="1132.7191"
-     r="1129.4908" />
-  <path
-     d="m 1128.7649,1143.6085 124.5488,306.5345 -274.79782,-56.7154 z m 262.9359,652.2304 201.6502,41.8612 -357.8302,-887.19506 -197.6962,-41.86154 -427.02365,723.8 201.65006,41.8616 88.96313,-148.5412 417.13946,87.7744 z M 711.23797,535.79535 1493.6099,669.80815 V 307.13969 Z M 1897.8032,726.27074 V 2203.3234 L 367.63434,1871.1317 370.83011,443.66439 C 780.41383,307.52084 1191.5661,178.08907 1607.1899,62.086103 V 682.8032 Z"
-     id="path4566"
-     style="fill:#e8c13a;fill-opacity:1;stroke:#000000;stroke-width:37.79527664;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-     inkscape:connector-curvature="0"
-     sodipodi:nodetypes="cccccccccccccccccccccccc" />
+     inkscape:current-layer="svg4568"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <g
+     id="g818"
+     transform="scale(0.05650121)">
+    <circle
+       r="1129.4908"
+       cy="1132.7191"
+       cx="1132.7191"
+       id="path4588"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:6.45664358;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <path
+       sodipodi:nodetypes="cccccccccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       style="fill:#e8c13a;fill-opacity:1;stroke:#000000;stroke-width:37.79527664;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4566"
+       d="m 1128.7649,1143.6085 124.5488,306.5345 -274.79782,-56.7154 z m 262.9359,652.2304 201.6502,41.8612 -357.8302,-887.19506 -197.6962,-41.86154 -427.02365,723.8 201.65006,41.8616 88.96313,-148.5412 417.13946,87.7744 z M 711.23797,535.79535 1493.6099,669.80815 V 307.13969 Z M 1897.8032,726.27074 V 2203.3234 L 367.63434,1871.1317 370.83011,443.66439 C 780.41383,307.52084 1191.5661,178.08907 1607.1899,62.086103 V 682.8032 Z" />
+  </g>
 </svg>
