@@ -45,7 +45,7 @@ function preventOverflow(popup, pageX) {
 
 function createSpinner() {
     var spinner = document.createElement('div');
-    spinner.classList.add('spinner');
+    spinner.classList.add('adict-spinner');
 
     return spinner;
 }
