@@ -6,14 +6,14 @@ document.addEventListener('click', event => {
         getStorageElement('dictionaryUrl', data => {
             showPopup(data.dictionaryUrl, selectedText, event);
         });
-    } else if (!event.target.closest('#dictionary-popup')) {
+    } else if (!event.target.closest('#adict-popup')) {
         removePopup();
     }
 });
 
 function showPopup(url, phrase, clickEvent) {
     let popup = document.createElement('div');
-    popup.setAttribute('id', 'dictionary-popup');
+    popup.setAttribute('id', 'adict-popup');
 
     popup.style.top = intToPx(clickEvent.pageY + 15);
     popup.style.left = intToPx(clickEvent.pageX);
@@ -79,7 +79,7 @@ function onIframeLoad(spinner, anchor) {
 }
 
 function removePopup() {
-    let popup = document.getElementById('dictionary-popup');
+    let popup = document.getElementById('adict-popup');
     if (popup) {
         popup.remove();
     }

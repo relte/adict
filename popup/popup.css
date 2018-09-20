@@ -1,4 +1,4 @@
-#dictionary-popup {
+#adict-popup {
     background-color: white;
     border-radius: 3px;
     box-shadow: 0 3px 15px rgba(0,0,0,0.2);
@@ -10,13 +10,13 @@
     text-align: right;
 }
 
-#dictionary-popup > iframe {
+#adict-popup > iframe {
     height: 260px;
     width: 100%;
     border: none;
 }
 
-#dictionary-popup > a {
+#adict-popup > a {
     bottom: 3px;
     right: 0;
     left: 0;
@@ -29,7 +29,7 @@
     position: relative;
 }
 
-#dictionary-popup > a:hover {
+#adict-popup > a:hover {
     text-decoration: underline;
 }
 
