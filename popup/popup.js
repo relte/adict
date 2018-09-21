@@ -56,7 +56,7 @@ class Popup {
 
     onPhraseChoice(phrase, clickEvent) {
         storage.get('dictionaryUrl', data => {
-            let url = data.dictionaryUrl.replace('%phrase%', phrase);
+            let url = data.dictionaryUrl.replace('%phrase%', phrase).toLowerCase();
             this.showOnPage(url, clickEvent);
         });
     }
