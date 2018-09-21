@@ -3,7 +3,7 @@ document.addEventListener('click', event => {
     if (selectedText && event.altKey) {
         removePopup();
 
-        getStorageElement('dictionaryUrl', data => {
+        storage.get('dictionaryUrl', data => {
             showPopup(data.dictionaryUrl, selectedText, event);
         });
     } else if (!event.target.closest('#adict-popup')) {
