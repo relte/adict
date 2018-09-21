@@ -1,25 +1,40 @@
-getStorageElement('dictionaryUrl', data => {
-    let element = document.querySelector('li[data-url="' + data.dictionaryUrl + '"');
-    setActiveDictionary(element);
-});
-
-document.addEventListener('click', event => {
-    if (!event.target.matches('li')) {
-        return;
+class Menu {
+    constructor() {
+        this.dictionaryList = document.getElementById('dictionaries');
     }
 
-    setActiveDictionary(event.target);
-    setStorageElement({
-        dictionaryUrl: event.target.getAttribute('data-url')
-    });
-});
-
-function setActiveDictionary(element) {
-    let parent = element.parentNode;
-    let elements = parent.querySelectorAll('li');
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].classList.remove('active');
+    initClickEventListener() {
+        this.dictionaryList.addEventListener('click', event => {
+            if (event.target.matches('li')) {
+                this.onDictionaryChoice(event);
+            }
+        });
     }
 
-    element.classList.add('active');
+    initCurrentDictionary() {
+        storage.get('dictionaryUrl', data => {
+            let dictionary = this.dictionaryList.querySelector('li[data-url="' + data.dictionaryUrl + '"');
+            this.setCurrentDictionary(dictionary);
+        });
+    }
+
+    onDictionaryChoice(event) {
+        this.setCurrentDictionary(event.target);
+        storage.set({
+            dictionaryUrl: event.target.getAttribute('data-url')
+        });
+    }
+
+    setCurrentDictionary(dictionary) {
+        let dictionaries = this.dictionaryList.querySelectorAll('li');
+        for (let i = 0; i < dictionaries.length; i++) {
+            dictionaries[i].classList.remove('active');
+        }
+
+        dictionary.classList.add('active');
+    }
 }
+
+const menu = new Menu();
+menu.initClickEventListener();
+menu.initCurrentDictionary();
