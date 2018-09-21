@@ -1,14 +1,22 @@
 browser.runtime.onInstalled.addListener(details => {
     if (details.reason === 'update') {
-        browser.tabs.create({
-            url: 'update_page/update_page.html'
-        });
+        onUpdate();
     } else if (details.reason === 'install') {
-        storage.set({
-            dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
-        });
+        onInstall();
     }
 });
+
+function onUpdate() {
+    browser.tabs.create({
+        url: 'update_page/update_page.html'
+    });
+}
+
+function onInstall() {
+    storage.set({
+        dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
+    });
+}
 
 browser.webRequest.onBeforeRequest.addListener(
     blockRequest,
@@ -34,14 +42,13 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 
 function blockRequest(requestDetails) {
-    let merriamWebsterExp = new RegExp(/.*merriam-webster\.com.*addon=true.*/);
-    let dictionaryComExp = new RegExp(/.*dictionary\.com.*addon=true.*/);
-    let dikiExp = new RegExp(/.*diki\.pl.*addon=true.*/);
-    if (requestDetails.originUrl.match(merriamWebsterExp) ||
-        requestDetails.originUrl.match(dictionaryComExp) ||
-        requestDetails.originUrl.match(dikiExp)
+    let merriamWebsterPattern = new RegExp(/.*merriam-webster\.com.*addon=true.*/);
+    let dictionaryComPattern = new RegExp(/.*dictionary\.com.*addon=true.*/);
+    let dikiPattern = new RegExp(/.*diki\.pl.*addon=true.*/);
+    if (requestDetails.originUrl.match(merriamWebsterPattern) ||
+        requestDetails.originUrl.match(dictionaryComPattern) ||
+        requestDetails.originUrl.match(dikiPattern)
     ) {
-        console.log(requestDetails.url);
         return {cancel: true};
     }
 }
