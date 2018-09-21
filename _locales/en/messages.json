@@ -35,10 +35,6 @@
     "message": "To view definitions double click on a phrase while holding the ALT key.",
     "description": "Usage info in the menu"
   },
-  "update_page_title": {
-    "message": "Adict updated!",
-    "description": "Update page title."
-  },
   "update_page_header": {
     "message": "Adict has been updated!",
     "description": "Update page header."
