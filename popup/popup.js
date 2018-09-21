@@ -1,86 +1,100 @@
-document.addEventListener('click', event => {
-    let selectedText = window.getSelection().toString();
-    if (selectedText && event.altKey) {
-        removePopup();
+class Spinner {
+    constructor() {
+        this.element = document.createElement('div');
+        this.element.classList.add('adict-spinner');
+    }
+}
 
-        storage.get('dictionaryUrl', data => {
-            showPopup(data.dictionaryUrl, selectedText, event);
+class Anchor {
+    constructor(url) {
+        this.element = document.createElement('a');
+
+        let href = url.replace('addon=true', 'addon=false');
+        this.element.href = href;
+        this.element.text = href;
+        this.element.target = '_blank';
+        this.element.style.display = 'none';
+    }
+}
+
+class Iframe {
+    constructor(url, spinner, anchor) {
+        this.spinner = spinner;
+        this.anchor = anchor;
+
+        this.element = document.createElement('iframe');
+        this.element.setAttribute('src', url);
+        this.element.style.display = 'none';
+
+        this.onLoad = this.onLoad.bind(this);
+        this.element.addEventListener('load', this.onLoad);
+    }
+
+    onLoad() {
+        this.spinner.remove();
+        this.element.style.display = 'block';
+        this.anchor.style.display = 'inline-block';
+    }
+}
+
+class Popup {
+    constructor() {
+        this.element = document.createElement('div');
+        this.element.setAttribute('id', 'adict-popup');
+    }
+
+    initClickEventListener() {
+        document.addEventListener('click', event => {
+            let selectedText = window.getSelection().toString();
+            if (selectedText && event.altKey) {
+                this.onPhraseChoice(selectedText, event);
+            } else if (!event.target.closest('#adict-popup')) {
+                this.onClickAway();
+            }
         });
-    } else if (!event.target.closest('#adict-popup')) {
-        removePopup();
     }
-});
 
-function showPopup(url, phrase, clickEvent) {
-    let popup = document.createElement('div');
-    popup.setAttribute('id', 'adict-popup');
-
-    popup.style.top = intToPx(clickEvent.pageY + 15);
-    popup.style.left = intToPx(clickEvent.pageX);
-    preventOverflow(popup, clickEvent.pageX);
-
-    let spinner = createSpinner(popup);
-    popup.appendChild(spinner);
-
-    url = url.replace('%phrase%', phrase);
-
-    let anchor = createAnchor(url);
-
-    popup.appendChild(createIframe(url, spinner, anchor));
-    popup.appendChild(anchor);
-
-    document.body.appendChild(popup);
-}
-
-function intToPx(number) {
-    return number + 'px';
-}
-
-function preventOverflow(popup, pageX) {
-    let rightOverflow = 520 - (window.innerWidth - pageX);
-    if (rightOverflow > 0) {
-        popup.style.left = intToPx(pageX - rightOverflow);
+    onPhraseChoice(phrase, clickEvent) {
+        storage.get('dictionaryUrl', data => {
+            let url = data.dictionaryUrl.replace('%phrase%', phrase);
+            this.showOnPage(url, clickEvent);
+        });
     }
-}
 
-function createSpinner() {
-    let spinner = document.createElement('div');
-    spinner.classList.add('adict-spinner');
+    onClickAway() {
+        while (this.element.firstChild) {
+            this.element.removeChild(this.element.firstChild);
+        }
 
-    return spinner;
-}
+        this.element.remove();
+    }
 
-function createAnchor(url) {
-    let anchor = document.createElement('a');
-    let href = url.replace('addon=true', 'addon=false');
-    anchor.href = href;
-    anchor.text = href;
-    anchor.target = '_blank';
-    anchor.style.display = 'none';
-    return anchor;
-}
+    showOnPage(url, clickEvent) {
+        this.element.style.top = this.intToPx(clickEvent.pageY + 15);
+        this.element.style.left = this.intToPx(clickEvent.pageX);
+        this.preventOverflow(clickEvent.pageX);
 
-function createIframe(url, spinner, anchor) {
-    let iframe = document.createElement('iframe');
-    iframe.setAttribute('src', url);
-    iframe.addEventListener('load', onIframeLoad(spinner, anchor));
-    iframe.style.display = 'none';
+        let spinner = (new Spinner()).element;
+        this.element.appendChild(spinner);
 
-    return iframe;
-}
+        let anchor = (new Anchor(url)).element;
+        this.element.appendChild((new Iframe(url, spinner, anchor)).element);
+        this.element.appendChild(anchor);
 
-function onIframeLoad(spinner, anchor) {
-    return function () {
-        let iframe = this;
-        spinner.remove();
-        iframe.style.display = 'block';
-        anchor.style.display = 'inline-block';
+        document.body.appendChild(this.element);
+    }
+
+    preventOverflow(pageX) {
+        let rightOverflow = 520 - (window.innerWidth - pageX);
+        if (rightOverflow > 0) {
+            this.element.style.left = this.intToPx(pageX - rightOverflow);
+        }
+    }
+
+    intToPx(number) {
+        return number + 'px';
     }
 }
 
-function removePopup() {
-    let popup = document.getElementById('adict-popup');
-    if (popup) {
-        popup.remove();
-    }
-}
+const popup = new Popup();
+popup.initClickEventListener();
