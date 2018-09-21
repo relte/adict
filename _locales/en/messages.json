@@ -43,6 +43,10 @@
     "message": "Adict has been updated!",
     "description": "Update page header."
   },
+  "release_notes": {
+    "message": "Release notes",
+    "description": "Release notes on the update page."
+  },
   "version_0_1_1_note": {
     "message": "The key to hold while looking up a phrase has been change from CTRL to <strong>ALT</strong>. Preserving priorly chosen dictionary has been fixed.",
     "description": "Version 0.1.1 release note."

@@ -32,6 +32,9 @@
   "update_page_header": {
     "message": "Adict został zaktualizowany!"
   },
+  "release_notes": {
+    "message": "Informacje o wydaniach"
+  },
   "version_0_1_1_note": {
     "message": "Klawisz, który należy przytrzymać przy wywoływaniu okienka z tłumaczeniem, został zmieniony z CTRL na <strong>ALT</strong>. Zachowywanie wybranego wcześniej słownika zostało naprawione."
   },
