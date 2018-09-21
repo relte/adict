@@ -5,10 +5,14 @@ body {
 }
 
 img {
-    padding-right: 1em;
+    float: left;
+    height: 64px;
+    width: 64px;
+    padding-right: 2em;
 }
 
 h2 {
+    line-height: 64px;
     margin-bottom: 2em;
 }
 
