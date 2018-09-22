@@ -6,6 +6,12 @@ body {
     padding: 10px;
 }
 
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 13pt;
+}
+
 p {
     margin-bottom: 0;
 }
@@ -18,12 +24,19 @@ ul {
 li {
     cursor: pointer;
     padding: 10px;
+    border-radius: 3px;
+    border-bottom: 1px solid transparent;
 }
 
 li + li {
     margin-top: 5px;
 }
 
-li:hover, .active {
+li:hover {
+    background-color: #f0f0f0;
+}
+
+li.active {
     background-color: #e8c13a;
+    border-bottom: 1px solid #c5a033;
 }
