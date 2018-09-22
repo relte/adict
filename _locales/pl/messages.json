@@ -40,5 +40,8 @@
   },
   "version_0_1_3_note": {
     "message": "Zostało dodane polskie tłumaczenie interfejsu rozszerzenia oraz informacji o wydaniach. Poprawiono wygląd."
+  },
+  "version_0_2_0_note": {
+    "message": "Ładowanie tłumaczeń zostało przyspieszone, a logo oraz interfejs przeprojektowane. Naprawiono ładowanie tłumaczeń dla fraz rozpoczynających się wielką literą."
   }
 }
