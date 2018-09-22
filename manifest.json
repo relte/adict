@@ -50,7 +50,23 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
-    "<all_urls>"
+    "https://www.diki.pl/*addon=true*",
+    "https://www.dictionary.com/*addon=true*",
+    "https://www.merriam-webster.com/*addon=true*",
+    "*://js-sec.indexww.com/*",
+    "*://*.amazon-adsystem.com/*",
+    "*://cdn.heapanalytics.com/*",
+    "*://*.google.com/*",
+    "*://*.google.pl/*",
+    "*://*.googletagservices.com/*",
+    "*://*.google-analytics.com/*",
+    "*://*.googletagmanager.com/*",
+    "*://*.googlesyndication.com/*",
+    "*://*.facebook.com/*",
+    "*://*.facebook.net/*",
+    "*://*.quantserve.com/*",
+    "*://*.pubmatic.com/*",
+    "*://*.bounceexchange.com/*"
   ],
   "browser_action": {
     "default_icon": {
