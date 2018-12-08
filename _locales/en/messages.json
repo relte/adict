@@ -27,6 +27,10 @@
     "message": "Diki (EN/PL)",
     "description": "The name visible on the dictionary choice list for Diki."
   },
+  "bab_la": {
+    "message": "Bab.la (EN/PL)",
+    "description": "The name visible on the dictionary choice list for Bab.la."
+  },
   "choose_dictionary": {
     "message": "Choose the dictionary",
     "description": "The header in the menu"

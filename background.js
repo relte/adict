@@ -18,6 +18,25 @@ function onInstall() {
     });
 }
 
+browser.webRequest.onHeadersReceived.addListener(
+    changeHeaders,
+    {
+        urls: ['https://*/*addon=true*'],
+        types: ['sub_frame']
+    },
+    ['blocking', 'responseHeaders']
+);
+
+function changeHeaders(details) {
+    for (let header of details.responseHeaders) {
+        if (header.name.toLowerCase() === "x-frame-options") {
+            header.value = "ALLOW";
+        }
+    }
+
+    return {responseHeaders: details.responseHeaders};
+}
+
 browser.webRequest.onBeforeRequest.addListener(
     blockRequest,
     {
@@ -41,10 +60,9 @@ browser.webRequest.onBeforeRequest.addListener(
     ['blocking']
 );
 
-function blockRequest(requestDetails) {
+function blockRequest(details) {
     let dictionaryPattern = new RegExp(/.*addon=true.*/);
-    if (requestDetails.originUrl.match(dictionaryPattern)) {
-        console.log(requestDetails.originUrl);
+    if (details.originUrl.match(dictionaryPattern)) {
         return {cancel: true};
     }
 }
