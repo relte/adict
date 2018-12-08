@@ -32,6 +32,11 @@
     },
     {
       "all_frames": true,
+      "matches": ["*://*/*addon=true*"],
+      "js": ["dictionary.js"]
+    },
+    {
+      "all_frames": true,
       "matches": ["https://www.dictionary.com/*addon=true*"],
       "css": ["popup/styles/dictionary_com.css"]
     },
