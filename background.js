@@ -54,7 +54,8 @@ browser.webRequest.onBeforeRequest.addListener(
             "*://*.facebook.net/*",
             "*://*.quantserve.com/*",
             "*://*.pubmatic.com/*",
-            "*://*.bounceexchange.com/*"
+            "*://*.bounceexchange.com/*",
+            "*://*.onetrust.com/*"
         ]
     },
     ['blocking']
