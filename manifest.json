@@ -44,6 +44,11 @@
       "all_frames": true,
       "matches": ["https://www.diki.pl/*addon=true*"],
       "css": ["popup/styles/diki.css"]
+    },
+    {
+      "all_frames": true,
+      "matches": ["https://*.bab.la/*addon=true*"],
+      "css": ["popup/styles/bab_la.css"]
     }
   ],
   "permissions": [

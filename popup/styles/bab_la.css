@@ -1,0 +1,7 @@
+.navbar, #fixed2, .breadcrumbs-nav, .info-panel, .quick-results-h2 {
+    display: none !important;
+}
+
+.main {
+    padding-top: 0 !important;
+}
