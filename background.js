@@ -42,13 +42,9 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 
 function blockRequest(requestDetails) {
-    let merriamWebsterPattern = new RegExp(/.*merriam-webster\.com.*addon=true.*/);
-    let dictionaryComPattern = new RegExp(/.*dictionary\.com.*addon=true.*/);
-    let dikiPattern = new RegExp(/.*diki\.pl.*addon=true.*/);
-    if (requestDetails.originUrl.match(merriamWebsterPattern) ||
-        requestDetails.originUrl.match(dictionaryComPattern) ||
-        requestDetails.originUrl.match(dikiPattern)
-    ) {
+    let dictionaryPattern = new RegExp(/.*addon=true.*/);
+    if (requestDetails.originUrl.match(dictionaryPattern)) {
+        console.log(requestDetails.originUrl);
         return {cancel: true};
     }
 }
