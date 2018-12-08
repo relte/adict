@@ -57,6 +57,9 @@ class Popup {
     onPhraseChoice(phrase, clickEvent) {
         storage.get('dictionaryUrl', data => {
             let url = data.dictionaryUrl.replace('%phrase%', phrase).toLowerCase();
+            if (url.indexOf('bab.la') !== -1) {
+                url = url.replace('/ /g', '-');
+            }
             this.showOnPage(url, clickEvent);
         });
     }
