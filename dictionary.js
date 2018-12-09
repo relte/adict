@@ -1,8 +1,18 @@
-document.body.addEventListener('click', function (event) {
-    let element = event.target;
-    if (element.classList.contains('one-click') ||
-        (element.tagName === 'A' && !element.classList.contains('cc-dismiss'))) {
-        event.preventDefault();
-        event.stopPropagation();
+function inIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
     }
-}, true);
+}
+
+if (inIframe()) {
+    let url = new URL(window.location);
+    let params = new URLSearchParams(url.search);
+    if (!params.has('addon')) {
+        params.set('addon', 'true');
+        url.search = params.toString();
+        window.location = url.toString();
+    }
+}
+
