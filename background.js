@@ -21,7 +21,12 @@ function onInstall() {
 browser.webRequest.onHeadersReceived.addListener(
     changeHeaders,
     {
-        urls: ['https://*/*addon=true*'],
+        urls: [
+            "https://www.dictionary.com/*",
+            "https://www.merriam-webster.com/*",
+            "https://www.diki.pl/*",
+            "https://*.bab.la/*"
+        ],
         types: ['sub_frame']
     },
     ['blocking', 'responseHeaders']
@@ -38,7 +43,7 @@ function changeHeaders(details) {
 }
 
 browser.webRequest.onBeforeRequest.addListener(
-    blockRequest,
+    blockScripts,
     {
         urls: [
             "*://js-sec.indexww.com/*",
@@ -61,7 +66,7 @@ browser.webRequest.onBeforeRequest.addListener(
     ['blocking']
 );
 
-function blockRequest(details) {
+function blockScripts(details) {
     let dictionaryPattern = new RegExp(/.*addon=true.*/);
     if (details.originUrl.match(dictionaryPattern)) {
         return {cancel: true};

@@ -32,7 +32,12 @@
     },
     {
       "all_frames": true,
-      "matches": ["*://*/*addon=true*"],
+      "matches": [
+        "https://www.dictionary.com/*",
+        "https://www.merriam-webster.com/*",
+        "https://www.diki.pl/*",
+        "https://*.bab.la/*"
+      ],
       "js": ["dictionary.js"]
     },
     {
