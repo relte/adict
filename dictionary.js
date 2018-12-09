@@ -15,4 +15,3 @@ if (inIframe()) {
         window.location = url.toString();
     }
 }
-
