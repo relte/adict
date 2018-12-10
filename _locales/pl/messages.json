@@ -18,10 +18,19 @@
     "message": "Merriam-Webster (ang.)"
   },
   "diki": {
-    "message": "Diki (ang./pol.)"
+    "message": "Diki (ang. / pol.)"
   },
   "bab_la": {
-    "message": "Bab.la (ang./pol.)"
+    "message": "Bab.la"
+  },
+  "bab_la_en_pl": {
+    "message": "ang. / pol."
+  },
+  "bab_la_en_de": {
+    "message": "ang. / niem."
+  },
+  "bab_la_en_es": {
+    "message": "ang. / hiszp."
   },
   "choose_dictionary": {
     "message": "Wybierz słownik"
