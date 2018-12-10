@@ -26,14 +26,30 @@ class Iframe {
         this.element.setAttribute('src', url);
         this.element.style.display = 'none';
 
+        this.onMessage = this.onMessage.bind(this);
         this.onLoad = this.onLoad.bind(this);
-        this.element.addEventListener('load', this.onLoad);
+        this.onUnload = this.onUnload.bind(this);
+        window.addEventListener('message', this.onMessage);
+    }
+
+    onMessage(message) {
+        if (message.data.popup_styling === true) {
+            setTimeout(this.onLoad, 50);
+        } else if (message.data.unload === true) {
+            this.onUnload();
+        }
     }
 
     onLoad() {
-        this.spinner.remove();
+        this.spinner.style.display = 'none';
         this.element.style.display = 'block';
         this.anchor.style.display = 'inline-block';
+    }
+
+    onUnload() {
+        this.spinner.style.display = 'block';
+        this.element.style.display = 'none';
+        this.anchor.style.display = 'none';
     }
 }
 

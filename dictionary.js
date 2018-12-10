@@ -13,5 +13,11 @@ if (inIframe()) {
         params.set('addon', 'true');
         url.search = params.toString();
         window.location = url.toString();
+    } else {
+        parent.postMessage({'popup_styling': true}, '*');
     }
+
+    window.addEventListener('beforeunload', function () {
+        parent.postMessage({'unload': true}, '*');
+    });
 }
