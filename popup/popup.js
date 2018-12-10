@@ -23,6 +23,7 @@ class Iframe {
         this.anchor = anchor;
 
         this.element = document.createElement('iframe');
+        this.element.name = 'adict_iframe';
         this.element.setAttribute('src', url);
         this.element.style.display = 'none';
 
