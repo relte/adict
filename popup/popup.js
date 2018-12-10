@@ -9,9 +9,12 @@ class Anchor {
     constructor(url) {
         this.element = document.createElement('a');
 
-        let href = url.replace('addon=true', 'addon=false');
-        this.element.href = href;
-        this.element.text = href;
+        let href = new URL(url);
+        let parameters = new URLSearchParams(href.search);
+        parameters.delete('addon');
+        href.search = parameters.toString();
+        this.element.href = href.toString();
+        this.element.text = href.toString();
         this.element.target = '_blank';
         this.element.style.display = 'none';
     }
