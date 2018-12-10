@@ -68,7 +68,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 function blockScripts(details) {
     let dictionaryPattern = new RegExp(/.*addon=true.*/);
-    if (details.originUrl.match(dictionaryPattern)) {
+    if (details.originUrl && details.originUrl.match(dictionaryPattern)) {
         return {cancel: true};
     }
 }

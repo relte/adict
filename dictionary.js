@@ -1,9 +1,5 @@
 function inIframe() {
-    try {
-        return window.self !== window.top;
-    } catch (e) {
-        return true;
-    }
+    return self !== top && window.name === 'adict_iframe';
 }
 
 if (inIframe()) {
