@@ -28,8 +28,20 @@
     "description": "The name visible on the dictionary choice list for Diki."
   },
   "bab_la": {
-    "message": "Bab.la (EN/PL)",
+    "message": "Bab.la",
     "description": "The name visible on the dictionary choice list for Bab.la."
+  },
+  "bab_la_en_pl": {
+    "message": "EN / PL",
+    "description": "Bab.la language parameter in dictionary choice list."
+  },
+  "bab_la_en_de": {
+    "message": "EN / DE",
+    "description": "Bab.la language parameter in dictionary choice list."
+  },
+  "bab_la_en_es": {
+    "message": "EN / ES",
+    "description": "Bab.la language parameter in dictionary choice list."
   },
   "choose_dictionary": {
     "message": "Choose the dictionary",

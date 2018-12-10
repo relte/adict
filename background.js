@@ -10,10 +10,16 @@ function onUpdate() {
     browser.tabs.create({
         url: 'update_page/update_page.html'
     });
+    setDefaults();
 }
 
 function onInstall() {
-    storage.set({
+    setDefaults();
+}
+
+function setDefaults() {
+    storage.setIfUndefined({
+        dictionaryName: 'dictionary_com',
         dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
     });
 }
