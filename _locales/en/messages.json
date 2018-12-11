@@ -4,7 +4,7 @@
     "description": "The title of the extension."
   },
   "extension_description": {
-    "message": "This extension allows you to easily search for translations of phrases in English and Polish.",
+    "message": "This extension allows you to easily search for translations of phrases in English, Polish, German, Spanish and French",
     "description": "The description of the extension."
   },
   "menu_page_path": {
