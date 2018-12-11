@@ -1,4 +1,9 @@
-.navbar, #fixed2, .breadcrumbs-nav, .info-panel, .quick-results-h2, .sound-layer {
+.navbar,
+#fixed2,
+.breadcrumbs-nav,
+.info-panel,
+.quick-results-h2,
+.sound-layer {
     display: none !important;
 }
 
