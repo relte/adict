@@ -7,10 +7,11 @@ browser.runtime.onInstalled.addListener(details => {
 });
 
 function onUpdate() {
+    //todo: remove setting defaults in the next release
+    setDefaults();
     browser.tabs.create({
         url: 'update_page/update_page.html'
     });
-    setDefaults();
 }
 
 function onInstall() {
@@ -18,7 +19,7 @@ function onInstall() {
 }
 
 function setDefaults() {
-    storage.setIfUndefined({
+    storage.set({
         dictionaryName: 'dictionary_com',
         dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
     });
