@@ -47,6 +47,10 @@
     "message": "English ⇆ French",
     "description": "Language parameter in dictionary choice list."
   },
+  "pl_de": {
+    "message": "Polish ⇆ German",
+    "description": "Language parameter in dictionary choice list."
+  },
   "choose_dictionary": {
     "message": "Choose the dictionary",
     "description": "The header in the menu"
