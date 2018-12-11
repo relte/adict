@@ -31,17 +31,21 @@
     "message": "Bab.la",
     "description": "The name visible on the dictionary choice list for Bab.la."
   },
-  "bab_la_en_pl": {
+  "en_pl": {
     "message": "English ⇆ Polish",
-    "description": "Bab.la language parameter in dictionary choice list."
+    "description": "Language parameter in dictionary choice list."
   },
-  "bab_la_en_de": {
+  "en_de": {
     "message": "English ⇆ German",
-    "description": "Bab.la language parameter in dictionary choice list."
+    "description": "Language parameter in dictionary choice list."
   },
-  "bab_la_en_es": {
+  "en_es": {
     "message": "English ⇆ Spanish",
-    "description": "Bab.la language parameter in dictionary choice list."
+    "description": "Language parameter in dictionary choice list."
+  },
+  "en_fr": {
+    "message": "English ⇆ French",
+    "description": "Language parameter in dictionary choice list."
   },
   "choose_dictionary": {
     "message": "Choose the dictionary",

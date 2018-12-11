@@ -23,14 +23,17 @@
   "bab_la": {
     "message": "Bab.la"
   },
-  "bab_la_en_pl": {
+  "en_pl": {
     "message": "angielski ⇆ polski"
   },
-  "bab_la_en_de": {
+  "en_de": {
     "message": "angielski ⇆ niemiecki"
   },
-  "bab_la_en_es": {
+  "en_es": {
     "message": "angielski ⇆ hiszpański"
+  },
+  "en_fr": {
+    "message": "angielski ⇆ francuski"
   },
   "choose_dictionary": {
     "message": "Wybierz słownik"
