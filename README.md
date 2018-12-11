@@ -1,7 +1,7 @@
 # Adict
 Instant dictionary lookup extension for Firefox and Chrome
 
-This extension allows you to easily look up a phrase in English or Polish holding ALT and double clicking. You can choose one of the three available dictionaries: dictionary.com (EN), merriam-webster.com (EN) and diki.pl (EN/PL).
+This extension allows you to easily look up a phrase in English, Polish, German, Spanish or French holding ALT and double clicking. You can choose one of the four available dictionaries: dictionary.com (EN), merriam-webster.com (EN), diki.pl (EN/PL) and and bab.la (EN, PL, DE, ES, FR).
 
 Download from Firefox Addons and Chrome Web Store:
 
