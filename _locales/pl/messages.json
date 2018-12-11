@@ -61,5 +61,8 @@
   },
   "version_0_2_0_note": {
     "message": "Ładowanie tłumaczeń zostało przyspieszone, a logo oraz interfejs przeprojektowane. Naprawiono ładowanie tłumaczeń dla fraz rozpoczynających się wielką literą."
+  },
+  "version_0_3_0_note": {
+    "message": "Zostały dodane obustronne słowniki Bab.la: angielsko-polski, -niemiecki, -hiszpański i -francuski oraz polsko-niemiecki. Dostosowany wygląd słowników jest teraz utrzymywany podczas przechodzenia na podstrony w okienku. Plus drobne usprawnienia."
   }
 }

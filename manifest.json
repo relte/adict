@@ -3,7 +3,7 @@
   "name": "__MSG_extension_name__",
   "description": "__MSG_extension_description__",
   "default_locale": "en",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "applications": {
     "gecko": {
       "id": "adict@krzysztoflament.pl"
