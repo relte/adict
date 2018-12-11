@@ -3,7 +3,8 @@ header,
 .mw-ad-slot-top,
 .recirc-bar-footer,
 .mobile-fixed-ad,
-.menu-filler {
+.menu-filler,
+#subscribe-overlay {
     display: none !important;
 }
 
