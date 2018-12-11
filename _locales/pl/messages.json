@@ -12,25 +12,25 @@
     "message": "update_page/update_page.pl.html"
   },
   "dictionary_com": {
-    "message": "Dictionary.com (ang.)"
+    "message": "Dictionary.com (angielski)"
   },
   "merriam_webster": {
-    "message": "Merriam-Webster (ang.)"
+    "message": "Merriam-Webster (angielski)"
   },
   "diki": {
-    "message": "Diki (ang. / pol.)"
+    "message": "Diki (angielski ⇆ polski)"
   },
   "bab_la": {
     "message": "Bab.la"
   },
   "bab_la_en_pl": {
-    "message": "ang. / pol."
+    "message": "angielski ⇆ polski"
   },
   "bab_la_en_de": {
-    "message": "ang. / niem."
+    "message": "angielski ⇆ niemiecki"
   },
   "bab_la_en_es": {
-    "message": "ang. / hiszp."
+    "message": "angielski ⇆ hiszpański"
   },
   "choose_dictionary": {
     "message": "Wybierz słownik"
