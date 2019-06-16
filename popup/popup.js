@@ -57,6 +57,20 @@ class Iframe {
     }
 }
 
+class TriggerButton {
+    constructor(clickEvent) {
+        this.element = document.createElement('button');
+        this.element.setAttribute('id', 'adict-trigger-button');
+        this.element.classList.add('adict-trigger');
+        this.element.style.top = this.intToPx(clickEvent.pageY + 10);
+        this.element.style.left = this.intToPx(clickEvent.pageX);
+    }
+
+    intToPx(number) {
+        return number + 'px';
+    }
+}
+
 class Popup {
     constructor() {
         this.element = document.createElement('div');
@@ -65,13 +79,32 @@ class Popup {
 
     initClickEventListener() {
         document.addEventListener('click', event => {
-            let selectedText = window.getSelection().toString();
-            if (selectedText && event.altKey) {
-                this.onPhraseChoice(selectedText, event);
+            let triggerButton = document.getElementById('adict-trigger-button');
+            if (this.isTriggerButtonToBeShown(event)) {
+                document.body.appendChild((new TriggerButton(event)).element);
+            } else if (triggerButton) {
+                triggerButton.remove();
+            }
+            if (this.isTriggered(event)) {
+                this.onPhraseChoice(window.getSelection().toString(), event);
             } else if (!event.target.closest('#adict-popup')) {
                 this.onClickAway();
             }
         });
+    }
+
+    isTextSelected() {
+        return !!window.getSelection().toString();
+    }
+
+    isTriggerButtonToBeShown(event) {
+        return this.isTextSelected() &&
+                !event.altKey &&
+                !document.getElementById('adict-trigger-button');
+    }
+
+    isTriggered(event) {
+        return this.isTextSelected() && (event.altKey || event.target.id === 'adict-trigger-button');
     }
 
     onPhraseChoice(phrase, clickEvent) {

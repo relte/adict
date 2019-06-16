@@ -42,6 +42,23 @@
     transform: translate(-50%, -50%);
 }
 
+#adict-trigger-button {
+    background-image: url('./../icons/main.svg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    min-height: initial;
+    min-width: initial;
+    width: 1em;
+    height: 1em;
+    border: 0;
+    position: absolute;
+    z-index: 9999;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
 .adict-spinner:after {
     animation: adict-spinner 1.2s linear infinite;
     border: 5px solid;
