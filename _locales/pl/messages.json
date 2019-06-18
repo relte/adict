@@ -41,8 +41,14 @@
   "choose_dictionary": {
     "message": "Wybierz słownik"
   },
+  "enable_button_trigger": {
+    "message": "Przycisk wyzwalający"
+  },
+  "enable_button_trigger_hint": {
+    "message": "Strony muszą zostać przeładowane, aby zastosować zmianę tej opcji"
+  },
   "usage_info": {
-    "message": "Aby wyświetlić tłumaczenie, kliknij dwukrotnie frazę przytrzymując klawisz ALT."
+    "message": "Aby wyświetlić tłumaczenie, zaznacz lub kliknij dwukrotnie frazę przytrzymując klawisz ALT. Możesz również użyć opcji przycisku wyzwalającego, który pozwala wyszukiwać słowa za pomocą samej myszki."
   },
   "update_page_header": {
     "message": "Adict został zaktualizowany!"

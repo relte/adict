@@ -53,10 +53,18 @@
   },
   "choose_dictionary": {
     "message": "Choose the dictionary",
-    "description": "The header in the menu"
+    "description": "The header in the menu."
+  },
+  "enable_button_trigger": {
+    "message": "Button trigger",
+    "description": "The option to show trigger button for mouse-only lookup."
+  },
+  "enable_button_trigger_hint": {
+    "message": "Pages must be reloaded to apply a change to this option",
+    "description": "Hint for the option to show trigger button for mouse-only lookup."
   },
   "usage_info": {
-    "message": "To view definitions double click on a phrase while holding the ALT key.",
+    "message": "To view definitions select or double click on a phrase while holding the ALT key. You can also use the button trigger option that lets you look words up with mouse only.",
     "description": "Usage info in the menu"
   },
   "update_page_header": {
