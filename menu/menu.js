@@ -1,6 +1,7 @@
 class Menu {
     constructor() {
         this.dictionaryList = document.getElementById('dictionaries');
+        this.enableButtonTrigger = document.getElementById('enable_button_trigger');
         this.babLaLanguageChoice = document.getElementById('bab_la_language');
         this.setCurrentBabLaLanguage = this.setCurrentBabLaLanguage.bind(this);
     }
@@ -13,6 +14,7 @@ class Menu {
             }
         });
         this.babLaLanguageChoice.addEventListener('change', this.setCurrentBabLaLanguage);
+        this.enableButtonTrigger.addEventListener('change', this.onButtonTriggerToggle);
     }
 
     onDictionaryChoice(dictionary) {
@@ -62,9 +64,20 @@ class Menu {
             });
         }
     }
+
+    onButtonTriggerToggle(event) {
+        storage.set({ enableButtonTrigger: event.target.checked });
+    }
+
+    initCurrentButtonTriggerToggle() {
+        storage.get('enableButtonTrigger', data => {
+            this.enableButtonTrigger.checked = data.enableButtonTrigger;
+        });
+    }
 }
 
 const menu = new Menu();
 menu.initClickEventListeners();
 menu.initCurrentBabLaLanguage();
 menu.initCurrentDictionary();
+menu.initCurrentButtonTriggerToggle();

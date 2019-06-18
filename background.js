@@ -21,7 +21,8 @@ function onInstall() {
 function setDefaults() {
     storage.set({
         dictionaryName: 'dictionary_com',
-        dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true'
+        dictionaryUrl: 'https://www.dictionary.com/browse/%phrase%?s=t&addon=true',
+        enableButtonTrigger: false
     });
 }
 
