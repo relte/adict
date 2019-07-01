@@ -70,5 +70,8 @@
   },
   "version_0_3_0_note": {
     "message": "Zostały dodane obustronne słowniki Bab.la: angielsko-polski, -niemiecki, -hiszpański i -francuski oraz polsko-niemiecki. Dostosowany wygląd słowników jest teraz utrzymywany podczas przechodzenia na podstrony w okienku. Plus drobne usprawnienia."
+  },
+  "version_0_4_0_note": {
+    "message": "Wyszukiwanie fraz jest możliwe teraz także bez użycia klawiatury - za pomocą przycisku pojawiającego się po zaznaczeniu lub dwukrotnym kliknięciu. Aby skorzystać z tej funkcji należy zaznaczyć <strong>Przycisk wyzwalający</strong> w menu i przeładować stronę, na której chcemy wyszukiwać."
   }
 }

@@ -94,5 +94,9 @@
   "version_0_3_0_note": {
     "message": "Bab.la dictionaries have been added: English to/from Polish, German, Spanish and French, also Polish to/from German. The styling of dictionaries is now kept while browsing in the pop-up. Plus minor improvements.",
     "description": "Version 0.3.0 release note."
+  },
+  "version_0_4_0_note": {
+    "message": "Phrase lookup can now be triggered with mouse only - using the button which shows up after selecting or double clicking on a phrase. To use this function check <strong>Trigger button</strong> in the menu and reload the page you want to search on.",
+    "description": "Version 0.4.0 release note."
   }
 }
