@@ -43,10 +43,11 @@
 }
 
 #adict-trigger-button {
-    background-image: url('./../icons/main.svg');
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAB2AAAAdgB+lymcgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAItSURBVDiNjZJfSFNxFMc/995590dt3o0MshiZqwj6J8F0qUHTBP88G/gYEb0Ee4rssYcFRYSDQBSf2kvRm/RQ5h+kYktLFCxZRLM/ThTnn9nG1nZ7sN17mwYd+MH5nXM+X845v5/A7nYCuBDsqbl59FBp+Vbq19r6Zi48/+XnYKB/YchYKBSBDcA9wFO1z8ybUC1yiV6Syao8HV4Z9t+JthRiogG+DowBHgCfR/kLBpBLBNoalebqA5ZAsUA38ACQConm+goNDIa+a769zMTJI2U3gEsFAQXoNY7j2m/BV6cAkM/Do6ElwjMbmoivXhGAh4BTBK4CDmOrLV4FSdzWG40kiP1IMxJe0/IdTU72OkoU4LIIdFJkrV5dbzSyDY691QWsFpHzZysAOkWgxgi7XVYaau0AqKoOzkaTzEaT+hgeBcAtArJRoLlOQfizjYl363xaSGm7eP4qodW1NzmpqpRLTcA3oAJAEOCiof33H5Icq7Zp92gspfmyLNDa4EgJwH3AD3D8sI2RwdPFK/mnjUcSyyIwAOQA7en+1/IC0yZgDugVRfxtjU4t+eL1Kl+XMjsgsyzS3V7JSiKbnZxP3irETefO2Cfj4141Pu5VF8e8qttlVYEdxyQJ6vDAqXSwp8YP+tfNX+s6GLeXSx3KHpN5YmqNvseLu3W9lVe5LUrS3UB/LGQU4GV4dd5sk56k0zl7ZGZzIzy7MQdkgGVgCugDrgDPpj9ufi5wvwFrZbCAOZPUCQAAAABJRU5ErkJggg==);
     background-position: center;
     background-size: cover;
     border-radius: 50%;
+    cursor: pointer;
     min-height: initial;
     min-width: initial;
     width: 1em;
